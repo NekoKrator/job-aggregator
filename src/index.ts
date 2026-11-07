@@ -4,6 +4,7 @@ import { createBot } from "./bot"
 interface Env {
   BOT_TOKEN: string
   WEBHOOK_SECRET: string
+  DB: D1Database
 }
 
 async function setup(url: URL, env: Env): Promise<Response> {
