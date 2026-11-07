@@ -19,7 +19,7 @@ async function setup(url: URL, env: Env): Promise<Response> {
 }
 
 function webhook(request: Request, env: Env): Promise<Response> {
-  const handle = webhookCallback(createBot(env.BOT_TOKEN),"cloudflare-mod", {
+  const handle = webhookCallback(createBot(env.BOT_TOKEN, env.DB), "cloudflare-mod", {
     secretToken: env.WEBHOOK_SECRET,
   })
 
